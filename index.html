@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
     <div class="header-img">
         <h1>Understanding <br>The Document Object Model</h1>
-        <div class="arrow"></div>
+        <h2>With JavaScript</h2>
+        <a href="#introduction"><button>Get Started</button></a>
     </div>
 
     <nav class="nav-buttons" id="sidebar">
@@ -24,16 +25,76 @@
             <span class="burger"></span>
         </div>
         <ul class="nav-elements" id="mySidenav">
-                <li><a href="" class="nav-link">Dom Intro</a></li>
+                <li><a href="#introduction" class="nav-link">Dom Intro</a></li>
                 <li><a href="" class="nav-link">Dom Nodes</a></li>
                 <li><a href="" class="nav-link">Traversing the Dom</a></li>
                 <li><a href="" class="nav-link">Dom Events</a></li>
                 <li><a href="" class="nav-link">Summary</a></li>
         </ul>
     </nav> 
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <div>
+            <header>
+                <span class="power-heading__pretend">What is</span>
+                <span class="power-heading__title"><strong>THE DOM</strong> in Javascript?</span>
+            </header>
+            <p>Every website you visit , consists of an HTML document. We know that the HTML document gives the structure of the page at the most basic level. But what if i told you that the HTML consists more that that?</p>
+            <header>
+                    <span class="power-heading__pretend">Document Object Model</span>
+            </header>
+            <p>The DOM in HTML, represents a tree like structure as see in the image, each element are represented as a node in a tree which we will explain more later, for now understand that the DOM is what allows javascript to interact with HTML.</p>
+            <p>What is so special about the DOM and what can we do with it? lets find out</p>
+           </div>
+            <img src="domtree.png" alt="the picture of the dom" class="dom-img">
+            <div class="example">
+                 <h1>Example</h1>
+                 <div class="color-background">
+                    <p>&lt;html lang="en&gt;</p>
+                        <p>&lt;head&gt;</p>
+                           <p>&lt;title&gt;Learning the DOM &lt;/title&gt;</p>
+                        <p>&lt;/head&gt;</p>
+                          
+                        <p>&lt;body&gt;</p>
+                        <p>&lt;h1 Document Object Model /h1&gt;</p>
+                        <p>&lt;/body&gt;</p>
+                          
+                    <p>&lt;/html&gt;</p>
+                 </div>
+              
+                <p>Javascript code in a script file</p>
+                <div class="color-background">
+                    <p>> document.body.style.backgroundColor = 'fuchsia';</p>
+                </div>
+            </div>
 
-    <main>
+            <div class="result">
+                <h1>Result</h1>
+                <img src="modifying-the-dom.png" alt="">
+            </div>
 
+            <div class="explanation">
+                <h1>Explanation</h1>
+                <p>The first thing you notice is that the dom allows us to change the background of the element just like css would. This is possible because the html document is represented with the keyword "Document".Using the "Document" let us select the whole html element as its the root element of the page. We then use the "." dot notation to select one of its child element , a child element is a element that is wrapped inside another element.</p>
+                <p>In this case the body is wrapped inside the HTML tag making it the child element of HTML.  You will hear the terms "parent" and "children" mentioned alot , this is because a DOM tree is represented as a hierarchical structure as mentioned earlier. Details about this will be explained more later</p>
+                <p>Keywords to remember: "Document" , "Parent" , "Children"</p>
+            </div>
+        </section>
+        <section class="main-section">
+            <div class="section-img"></div>
+            <!-- <div class="second-section__div">
+                <header>
+                        <span class="power-heading__pretend">What are</span>
+                        <span class="power-heading__title"><strong>DOM NODES</strong> in Javascript?</span>
+                </header>
+            </div>     -->
+        </section>
+        <section class="main-section">
+        </section>
+        <section class="main-section">
+        </section>
+        <section class="main-section">
+        </section>
     </main>
 
 </body>

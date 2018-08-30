@@ -11,7 +11,7 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .header-img {
@@ -44,24 +44,35 @@ body {
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.header-img .arrow {
+.header-img h2 {
+  margin-top: 1rem;
+  color: black;
+  font-size: 3rem;
+  font-family: 'Pacifico';
+}
+
+.header-img a {
+  text-decoration: none;
+  margin-bottom: 3rem;
   position: absolute;
   bottom: 0;
-  margin-bottom: 3rem;
-  height: 3vw;
-  width: 3vw;
-  border-style: solid;
-  border-color: white;
-  border-width: 0px 4px 4px 0px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: border-color 150ms ease-in-out;
-  transition: border-color 150ms ease-in-out;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.header-img .arrow:hover, .header-img .arrow:focus {
-  border-color: #4da6ff;
+.header-img a button {
+  padding: 1rem;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid black;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+}
+
+.header-img a button:hover {
+  color: black;
+  background: #cce0ff;
 }
 
 .nav-buttons {
@@ -74,6 +85,7 @@ body {
   top: 0;
   -webkit-transition: all 500ms linear;
   transition: all 500ms linear;
+  z-index: 5;
 }
 
 .nav-buttons .toggle-btn {
@@ -88,6 +100,10 @@ body {
   height: 5px;
   background: #151719;
   margin: 3px 0px;
+}
+
+.active {
+  left: 0px;
 }
 
 .nav-elements {
@@ -122,7 +138,97 @@ body {
   border-bottom: 2px solid white;
 }
 
-.active {
-  left: 0px;
+main {
+  height: 100%;
+}
+
+@media (min-width: 700px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
+  }
+}
+
+.main-section {
+  grid-column: 2 / -1;
+  height: 100%;
+}
+
+.main-section .power-heading__pretend {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: .75;
+  text-transform: uppercase;
+}
+
+.main-section span {
+  display: block;
+  margin-left: 1rem;
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+.main-section p {
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .main-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+}
+
+.dom-img {
+  margin-top: 2rem;
+}
+
+.example {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.example .color-background {
+  background-color: #efefef;
+  width: 80%;
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem 2rem;
+}
+
+.result {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.result img {
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.explanation {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.explanation h1 {
+  font-size: 2.5rem;
+}
+
+.section-img {
+  height: 40rem;
+  background: url(animated-gray.png);
+  background-size: cover;
+  grid-column: 1 / -1;
 }
 /*# sourceMappingURL=main.css.map */
