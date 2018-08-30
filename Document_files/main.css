@@ -1,0 +1,71 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+@media (min-width: 700px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 8px auto 8px;
+        grid-template-rows: 8px auto 8px;
+  }
+}
+
+.header-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  grid-row: 1 / -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 188, 156, 0.4)), to(rgba(231, 76, 60, 0.4))), url("nature-flowers-garden-87452.jpg");
+  background: linear-gradient(rgba(26, 188, 156, 0.4), rgba(231, 76, 60, 0.4)), url("nature-flowers-garden-87452.jpg");
+  background-size: cover;
+  -webkit-filter: drop-shadow(4px 4px 10px, black);
+          filter: drop-shadow(4px 4px 10px, black);
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.header-img h1 {
+  font-size: 4.5rem;
+  opacity: 0.9;
+  font-family: 'Pacifico', cursive;
+}
+
+.header-img .arrow {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+  height: 3vw;
+  width: 3vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 3px 4px 0px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: border-width 150ms ease-in-out;
+  transition: border-width 150ms ease-in-out;
+}
+/*# sourceMappingURL=main.css.map */

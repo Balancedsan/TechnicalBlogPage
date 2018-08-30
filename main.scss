@@ -1,90 +1,120 @@
-
-@mixin display-center()
-{
+@mixin flex-container-middle($direction) {
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
+    flex-direction:$direction
 }
-
 
 @mixin media-min-width($width){
     @media(min-width:$width){
       @content
     }
 }
+$var-height:100%;
+$var-size:1rem;
 
 *{
+    box-sizing: border-box;
     margin:0;
     padding:0;
-    box-sizing: border-box;
 }
+
 
 html{
-    height:100%;
-    body{
-        height:100%;
-        font-family: 'Raleway', sans-serif;
-        @include media-min-width(700px)
-        {
-            display:grid;
-            grid-template-columns: 1fr 2fr;
-        }
-    
-    }
+    height:$var-height;
 }
+
+body{
+    height: $var-height;
+    font-family: 'Lato', sans-serif;
+}
+
+//the main image webpage
 
 .header-img{
-    @include display-center();
-    background:url("graphic.jpg");
-    grid-column: 1 /-1;
+    @include flex-container-middle(column);
+    height: $var-height;
+    background:  linear-gradient(rgba(26, 188, 156, 0.4), rgba(231, 76, 60, 0.4)),url("nature-flowers-garden-87452.jpg");
+    background-size:cover;
+    color:#ffffff;
+    text-align:center;
+    position: relative;
+
     h1{
-        font-family: 'Lobster', cursive;
-        color:white;
-        font-size:2rem;
-        margin-left:20%;
+        font-size:$var-size * 4.5;
+        opacity:0.9;
+        font-family: 'Pacifico', cursive;
+        text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     }
-    @include media-min-width(700px)
-    {
-        h1{
-            font-size:3rem;
+    
+    .arrow{
+        position:absolute;
+        bottom:0;
+        margin-bottom:$var-size *3;
+        height: 3vw;
+        width: 3vw;
+        border-style: solid;
+        border-color: white;
+        border-width: 0px 4px 4px 0px;
+        transform: rotate(45deg);
+        transition: border-color 150ms ease-in-out;
+        text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+
+        &:hover,
+        &:focus{
+            border-color:#4da6ff;
         }
     }
 }
+
+
+//the sidebar for the page
+
 .nav-buttons{
-    overflow-y: hidden;
-    background: #e6e6e6;
-    position:fixed;
-    top:0px;
     width:20%;
     height:100%;
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    h1{
-        margin-top:5rem;
-    }
-    .fa-js{
-        margin-top:3rem;
-        margin-left:4rem;
-        font-size:5rem;
-    }
-    .nav-elements{
-        text-align: center;
-        margin-top:20%;
-        list-style: none;
-        text-decoration: none;
-        li{
-            margin:2rem;
+    background:black;
+    opacity:0.5;
+    position:fixed;
+    left:-20%;
+    top:0;
+    transition:all 500ms linear;
+
+    .toggle-btn{
+        position:absolute;
+        left:500px;
+        top:20px;
+
+        .burger{
+            display:block;
+            width:30px;
+            height:5px;
+            background:#151719;
+            margin:3px 0px;
         }
+    }
 
+
+}
+.nav-elements{
+    @include flex-container-middle(column);
+    height:100%;
+    li{
+        margin-top:1rem;
+        font-size:$var-size *2;
         .nav-link{
+            color:rgba(255,255,255,0.9);
             text-decoration:none;
-            font-size:1.5rem;
 
-            &:hover,
-            &:active{
-                border-bottom:2px solid black;
+            &:hover{
+                color:#0052cc;
+                border-bottom:2px solid white;
             }
         }
     }
- }
+}
+
+
+.active{
+    left:0px;
+}
