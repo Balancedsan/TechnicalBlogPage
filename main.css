@@ -169,6 +169,7 @@ body .smooth-container {
   height: 5px;
   background: white;
   margin: 3px 0px;
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {
@@ -336,6 +337,7 @@ main {
   background: #66a3ff;
   cursor: pointer;
   margin-top: 2rem;
+  font-weight: 700;
 }
 
 .section5 a button:hover {
