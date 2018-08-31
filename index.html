@@ -20,11 +20,11 @@
 
     <nav class="nav-buttons" id="sidebar">
         <ul class="nav-elements" id="mySidenav">
-                <li><a href="#introduction" class="nav-link">Dom Intro</a></li>
-                <li><a href="" class="nav-link">Dom Nodes</a></li>
-                <li><a href="" class="nav-link">Traversing the Dom</a></li>
-                <li><a href="" class="nav-link">Dom Events</a></li>
-                <li><a href="" class="nav-link">Summary</a></li>
+                <li><a href="#introduction"  class="nav-link" id="nav1">Dom Intro</a></li>
+                <li><a href="#domNode" class="nav-link" id="nav2">Dom Nodes</a></li>
+                <li><a href="#traverse" class="nav-link" id="nav3">Traversing the Dom</a></li>
+                <li><a href="#event" class="nav-link" id="nav4">Dom Events</a></li>
+                <li><a href="#summary" class="nav-link" id="nav5">Summary</a></li>
                 <div class="toggle-btn" id="burger-toggle">
                         <span class="burger"></span>
                         <span class="burger"></span>
@@ -51,33 +51,76 @@
              <p>Keyword: <strong>DOM </strong><strong> Parent</strong><strong> Children</strong></p>    
             </div>
         </section>
-        <section class="main-section section2">
+        <section class="main-section section2" id="domNode">
             <div class="content2">
                     <header>
                             <span class="power-heading__pretend">What are</span>
                             <span class="power-heading__title"><strong>DOM NODES</strong> in Javascript?</span>
                     </header>
-                    <p>Every item on the page are represented by <strong>Nodes</strong>on the page. Which consist of 3 main nodes. The element node , the text node and comment node. 
+                    <p>Every item on the page are represented by <strong>Nodes</strong> on the page. Which consist of 3 main nodes. The element node , the text node and comment node. 
                        The element node is represented by any tags on the html page, whereas the text node is represented by any content written on the page and the comment node refers to any 
                        comment we type onto the html document</p>
-                    <p>By representing items in a node , it allows javascript to have another way to interact with the HTML document besides selecting the elements on the page. </p>
+                    <p>By representing items in a node , it allows javascript to have another way to interact with the HTML document besides selecting the elements on the page. Hoever, the node
+                       that we are interested in is the element node</p>
                     <p>Keyword: <strong>Element node </strong><strong> Text node </strong><strong> Comment node</strong></p>    
             </div>
         </section>
-        <section class="main-section section3">
+        <section class="main-section section3" id="traverse">
              <div class="content3">
                     <header>
                             <span class="power-heading__pretend">How to</span>
                             <span class="power-heading__title"><strong>TRAVERSE THE DOM</strong> in Javascript?</span>
                     </header>
+                    <p>We explained on the concept of nodes in the previous session ,
+                       in this session we will talk about traversing the node. 
+                       We can traverse the node by using the "children" and "parent" keyword as explained briefly in the introduction session. 
+                       Traversing allow us to indirect target children elements wrapped inside a parent container
+                    </p>
+                     <p>Suppose we want to select the body of the document, there are two ways we can do this, the first way document.body which selects the body
+                        of the html. By using the "." notation we can access the child of the first element , in this case document refers to the root element and body being 
+                        the child element of document. Another way we can achieve this is document.children. Which access the child element of document which is the body 
+                     </p>
+                     <p>Keyword: <strong>"." notation</strong><strong> document.body </strong><strong> document.children </strong></p>    
              </div>
         </section>
-        <section class="main-section section4">
-        </section>
-        <section>
-        </section>
+        <section class="main-section section4" id="event">
+                <div class="content4">
+                        <header>
+                                <span class="power-heading__pretend">what are</span>
+                                <span class="power-heading__title"><strong>DOM EVENTS</strong> in Javascript?</span>
+                        </header>
+                        <p>Events allow us to trigger responses when an action occur. A real life example will be cooking lunch when we are hungry,
+                           whereby being hungry is an event and the response is cooking lunch. Using the idea of events , we want to be able to use
+                           events to trigger responses when the user interact with the page. Hence , javascript has event listners to listen for events allow 
+                           us to control the elements on the page.
+                        </p>
+                         <p>
+                            An example of an event on a webpage , is a button event whereby a user clicks a button. Using event listners provided by javascript. Javascript 
+                            will fire off the event depending on what you command it to do. A live example of this is the menu button on the top of the page. If you click on the menu
+                            a list of menu option slides down displaying the option on the page. The event being the button , and the response slide down menu option is triggered.
+                         </p>
+                         <p>Keyword: <strong>Events</strong><strong> Responses </strong></p>    
+                 </div>
+            </section>
+             <section class="main-section section5" id="summary">
+                <div class="content5">
+                        <header>
+                                <span class="power-heading__pretend">summary of</span>
+                                <span class="power-heading__title"><strong>THE DOM</strong> in Javascript</span>
+                        </header>
+                        <p>
+                            In this overview on the dom, we have covered an brief intoduction of the dom and how it interacts with the page For more info about the DOM do check the 
+                            link below.
+                        </p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank"><button>More Info</button></a>
+                </div>
+            </section>
+            <footer class="footer">
+                    <p>BalancedSan 2018</p>
+             </footer>
     </main>
 
 </body>
 </html>
+<script src="zenscroll.js"></script>
 <script src="main.js"></script>

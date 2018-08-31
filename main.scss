@@ -1,3 +1,7 @@
+
+$var-height:100%;
+$var-size:1rem;
+
 @mixin flex-container-middle($direction) {
     display:flex;
     justify-content: center;
@@ -5,13 +9,15 @@
     flex-direction:$direction
 }
 
+
+
 @mixin media-min-width($width){
     @media(min-width:$width){
       @content
     }
 }
-$var-height:100%;
-$var-size:1rem;
+
+
 
 *{
     box-sizing: border-box;
@@ -27,6 +33,7 @@ html{
 body{
     height: $var-height;
     font-family: 'Nunito Sans', sans-serif;
+    .smooth-container { scroll-behavior: smooth }
 }
 
 //the main image webpage
@@ -40,18 +47,28 @@ body{
     text-align:center;
     position: relative;
 
+
     h1{
-        font-size:$var-size * 4.5;
+        font-size:$var-size * 2.2;
         opacity:0.9;
         font-family: 'Pacifico', cursive;
         text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+        margin-top:10rem;
+        @include media-min-width(700px){
+            margin-top:0rem;
+            font-size:$var-size * 4.5;
+        }
     }
 
    h2{
        margin-top:1rem;
        color:black;
-       font-size:$var-size * 3;
+       font-size:$var-size * 2;
        font-family: 'Pacifico';
+       
+       @include media-min-width(700px){
+        font-size:$var-size * 3;
+    }
    }
    a{
         text-decoration:none;
@@ -65,13 +82,16 @@ body{
             border-radius:5px;
             background:rgba(255, 255, 255, 0);
             border:2px solid black;
-            font-size:$var-size * 1.4;
+            font-size:$var-size * 1.2;
             cursor: pointer;
             color:white;
             font-weight:800;
             &:hover{
                 color:black;
                 background:#cce0ff;
+            }
+            @include media-min-width(700px){
+                font-size:$var-size * 1.4;
             }
         }
         
@@ -85,17 +105,18 @@ body{
 
 .nav-buttons{
     width:100vw;
-    height:50vh;
+    height:45vh;
     background:black;
     opacity:0.5;
     position:fixed;
-    top:-15vh;
+    top:0vh;
     transition:all 500ms linear;
     z-index:5;
 
 
     @include media-min-width(700px){
         height:20vh;
+        top:-15vh;
     }
 
 }
@@ -127,11 +148,15 @@ body{
         bottom:0;
         margin-bottom:0.5rem;
         .burger{
-            display:block;
+            display:none;
             width:30px;
             height:5px;
             background:white;
             margin:3px 0px;
+
+            @include media-min-width(700px){
+                display:block;
+            }
         }
     }
     @include media-min-width(700px){
@@ -152,26 +177,40 @@ main{
     height:100%;
     @include flex-container-middle(column);
     .power-heading__pretend{
-        font-size:$var-size *3;
+        font-size:$var-size *1.5;
         font-weight: 400;
         opacity: .75;
         text-transform: uppercase;
+
+        @include media-min-width(700px){
+            font-size:$var-size * 3;
+        }
     }
 
     span{
         display:block;
-        margin-left:1rem;
+        margin-left:2rem;
         text-align:left;
-        font-size:$var-size *4;
+        font-size:$var-size *2;
+        @include media-min-width(700px){
+            font-size:$var-size * 4;
+        }
     }
 
     p{
         text-align:left;
         margin-top:1rem;
-        margin-left:1rem;
-        font-size:$var-size *1.5;
+        margin-left:2rem;
+        font-size:$var-size *1;
         line-height:1.5;
+
+        @include media-min-width(700px){
+            font-size:$var-size * 1.5;
+        }
+
     }
+
+
 }
 
   .section1{
@@ -208,3 +247,62 @@ main{
     }
 }
 
+.section3{
+    background:url("background3.jpg");
+    background-size:cover;
+}
+
+.section4{
+background:url("background4.jpg");
+background-size:cover;
+color:white;
+    .content4{
+        margin-right:2rem;
+        margin-top:4rem;
+            span{
+                margin-right:2rem;
+                text-align:right;
+            }
+
+            p{
+                margin-right:2rem;
+                text-align: right;
+            }
+
+    }
+
+}
+
+.section5{
+    background:url("background5.jpg");
+    background-size:cover;
+
+    a{
+        margin-left:2rem;
+
+        button{
+            border:2px solid black;
+            padding:0.5rem;
+            color:white;
+            border-radius:10px;
+            background:#66a3ff;
+            cursor: pointer;
+            margin-top:2rem;
+        
+            &:hover{
+               background:rgba(255,255,255,0.1);
+               color:black;
+            }
+        }
+    }
+}
+
+.footer{
+    width:100vw;
+    height:24px;
+    bottom:0;
+    background:black;
+    text-align:center;
+    color:white;
+    font-weight:700;
+}
