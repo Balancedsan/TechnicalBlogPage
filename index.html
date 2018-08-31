@@ -33,67 +33,48 @@
         </ul>
     </nav> 
     <main id="main-doc">
-        <section class="main-section" id="introduction">
-            <div>
+        <section class="main-section section1" id="introduction">
+            <div class="content">
             <header>
                 <span class="power-heading__pretend">What is</span>
                 <span class="power-heading__title"><strong>THE DOM</strong> in Javascript?</span>
             </header>
-            <p>Every website you visit , consists of an HTML document. We know that the HTML document gives the structure of the page at the most basic level. But what if i told you that the HTML consists more that that?</p>
-            <header>
-                    <span class="power-heading__pretend">Document Object Model</span>
-            </header>
-            <p>The DOM in HTML, represents a tree like structure as see in the image, each element are represented as a node in a tree which we will explain more later, for now understand that the DOM is what allows javascript to interact with HTML.</p>
-            <p>What is so special about the DOM and what can we do with it? lets find out</p>
-           </div>
-            <img src="domtree.png" alt="the picture of the dom" class="dom-img">
-            <!-- <div class="example">
-                 <h1>Example</h1>
-                 <div class="color-background">
-                    <p>&lt;html lang="en&gt;</p>
-                        <p>&lt;head&gt;</p>
-                           <p>&lt;title&gt;Learning the DOM &lt;/title&gt;</p>
-                        <p>&lt;/head&gt;</p>
-                          
-                        <p>&lt;body&gt;</p>
-                        <p>&lt;h1 Document Object Model /h1&gt;</p>
-                        <p>&lt;/body&gt;</p>
-                          
-                    <p>&lt;/html&gt;</p>
-                 </div>
-              
-                <p>Javascript code in a script file</p>
-                <div class="color-background">
-                    <p>> document.body.style.backgroundColor = 'fuchsia';</p>
-                </div>
-            </div> -->
-
-            <!-- <div class="result">
-                <h1>Result</h1>
-                <img src="modifying-the-dom.png" alt="">
+            <p>Every website you visit , consists of an HTML document. We know that at the most basic level, 
+               the HTML document gives the structure of the page. While css render the style of the content.
+               So where does the DOM fits in?, DOM stands for Document Object Model that allows javascript to interact
+               with the HTML elements directly.</p>
+            <p>Dom has a tree like hierachical structure, Whereby HTML elements are represented as nodes. The root of the node starts
+               with the HTML tag which is the parent of all elements inside it, like the body tag.
+               The body tag branches out even further to other child elements such as the h1 or div tag inside it, creating more children. 
+               While learning the DOM it's important to understand which of the elements are the "parent" or "children" element.
+               We will dive deeper into that when learning about nodes </p>
+             <p>Keyword: <strong>DOM </strong><strong> Parent</strong><strong> Children</strong></p>    
             </div>
-
-            <div class="explanation">
-                <h1>Explanation</h1>
-                <p>The first thing you notice is that the dom allows us to change the background of the element just like css would. This is possible because the html document is represented with the keyword "Document".Using the "Document" let us select the whole html element as its the root element of the page. We then use the "." dot notation to select one of its child element , a child element is a element that is wrapped inside another element.</p>
-                <p>In this case the body is wrapped inside the HTML tag making it the child element of HTML.  You will hear the terms "parent" and "children" mentioned alot , this is because a DOM tree is represented as a hierarchical structure as mentioned earlier. Details about this will be explained more later</p>
-                <p>Keywords to remember: "Document" , "Parent" , "Children"</p>
-            </div> -->
-        <!-- </section>
-        <section class="main-section">
-            <div class="section-img"></div> -->
-            <!-- <div class="second-section__div">
-                <header>
-                        <span class="power-heading__pretend">What are</span>
-                        <span class="power-heading__title"><strong>DOM NODES</strong> in Javascript?</span>
-                </header>
-            </div>     -->
         </section>
-        <section class="main-section">
+        <section class="main-section section2">
+            <div class="content2">
+                    <header>
+                            <span class="power-heading__pretend">What are</span>
+                            <span class="power-heading__title"><strong>DOM NODES</strong> in Javascript?</span>
+                    </header>
+                    <p>Every item on the page are represented by <strong>Nodes</strong>on the page. Which consist of 3 main nodes. The element node , the text node and comment node. 
+                       The element node is represented by any tags on the html page, whereas the text node is represented by any content written on the page and the comment node refers to any 
+                       comment we type onto the html document</p>
+                    <p>By representing items in a node , it allows javascript to have another way to interact with the HTML document besides selecting the elements on the page. </p>
+                    <p>Keyword: <strong>Element node </strong><strong> Text node </strong><strong> Comment node</strong></p>    
+            </div>
         </section>
-        <section class="main-section">
+        <section class="main-section section3">
+             <div class="content3">
+                    <header>
+                            <span class="power-heading__pretend">How to</span>
+                            <span class="power-heading__title"><strong>TRAVERSE THE DOM</strong> in Javascript?</span>
+                    </header>
+             </div>
         </section>
-        <section class="main-section">
+        <section class="main-section section4">
+        </section>
+        <section>
         </section>
     </main>
 
